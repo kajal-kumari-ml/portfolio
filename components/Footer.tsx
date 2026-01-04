@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
                 </div>
-                <span className="text-lg font-medium">Chandigarh, India</span>
+                <span className="text-lg font-medium">Noida, Uttar Pradesh, India</span>
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { CONTRIBUTION_POINTS } from '../data';
 
 const Contribution: React.FC = () => {
@@ -17,23 +18,35 @@ const Contribution: React.FC = () => {
           <p className="text-slate-400 text-lg mb-10 text-center sm:text-left">
             If I join your organization, I will leverage my expertise to drive impact across the backend lifecycle:
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {CONTRIBUTION_POINTS.map((point, index) => (
-              <div key={index} className="flex items-start p-4 bg-white/5 rounded-xl border border-white/5 hover:border-blue-500/30 transition-all">
-                <div className="flex-shrink-0 w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center mr-4">
+              <motion.div
+                key={index}
+                className="flex items-start p-4 bg-white/5 rounded-xl border border-white/5 transition-all"
+                whileHover={{
+                  scale: 1.05,
+                  rotateX: 5,
+                  rotateY: 5,
+                  boxShadow: "0px 10px 30px rgba(0,0,0,0.5)",
+                  zIndex: 10
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <div className="flex-shrink-0 w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center mr-4" style={{ transform: "translateZ(20px)" }}>
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <p className="text-slate-200 font-medium pt-2">{point}</p>
-              </div>
+                <p className="text-slate-200 font-medium pt-2" style={{ transform: "translateZ(10px)" }}>{point}</p>
+              </motion.div>
             ))}
           </div>
-          
+
           <div className="mt-12 p-6 bg-blue-600/10 rounded-2xl border border-blue-600/20 text-center">
             <p className="text-blue-300 font-semibold text-lg italic">
-              "My goal is to deliver backend solutions that are not only technically sound but also aligned with product and business objectives."
+              My goal is to deliver backend solutions that are not only technically sound but also aligned with product and business objectives.
             </p>
           </div>
         </div>

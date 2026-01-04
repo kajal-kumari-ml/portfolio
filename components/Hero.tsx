@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           {/* Text Content - Focused on the provided bio */}
           <div className="flex-1 text-center lg:text-left order-2 lg:order-1 animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-bold tracking-wider text-blue-400 uppercase bg-blue-400/10 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
               Available for New Opportunities
             </div>
             <h1 className="text-5xl sm:text-7xl font-extrabold mb-8 text-white leading-[1.1]">
